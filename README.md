@@ -56,8 +56,8 @@ A production-ready **Retrieval-Augmented Generation (RAG)** pipeline built with:
 
 ### 1. Clone & install
 ```bash
-git clone https://github.com/<you>/rag-pipeline-<yourname>.git
-cd rag-pipeline-<yourname>
+git clone https://github.com/tharunm490/rag-pipeline-Tharun-M.git
+
 
 pip install uv ##if you do not have the uv installed
 uv init
