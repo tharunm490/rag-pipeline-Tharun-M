@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rag-pipeline-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerCommand: python run.py
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+    disk:
+      name: chroma-storage
+      mountPath: /app/chroma_db
+      sizeGB: 1
