@@ -1,3 +1,17 @@
+## 🚀 Live Demo
+
+| Service | URL |
+|---|---|
+| 🌐 Streamlit Frontend | https://rag-pipeline-tharunm.streamlit.app |
+| 📡 API Docs | https://rag-pipeline-tharun-m.onrender.com/docs |
+| ❤️ Health Check | https://rag-pipeline-tharun-m.onrender.com/health |
+
+## 🐳 Docker Hub
+
+| Image | Link |
+|---|---|
+| API | https://hub.docker.com/r/tharunm490/rag-pipeline-api |
+| Streamlit | https://hub.docker.com/r/tharunm490/rag-pipeline-streamlit |
 # RAG Pipeline
 
 A production-ready **Retrieval-Augmented Generation (RAG)** pipeline built with:
