@@ -1,0 +1,36 @@
+name: RAG Pipeline CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1 — Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2 — Setup Python
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Step 3 — Install CPU only torch first
+      - name: Install torch CPU
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+      # Step 4 — Install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Step 5 — Run tests
+      - name: Run unit tests
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: pytest tests/test_core.py -v
